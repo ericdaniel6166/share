@@ -10,13 +10,15 @@ User as user
 
 rectangle "bookstore system - rent physical book" {
     usecase "rent book" as rent_book
+    usecase "return book" as return_book
+    usecase "return book \n to warehouse" as return_book_warehouse
     usecase "browse book" as browse_book
-    usecase "track \n book borrowings" as track_book_borrow
-    usecase "search books \n in the warehouse" as search_book
+    usecase "search book location \n in the warehouse" as search_book
     usecase "pay deposit" as pay
     usecase "pay \n with cash" as pay_cash
     usecase "pay \n with e-wallet" as pay_e_wallet
     usecase "record \n book reservation" as record_book_reservation
+    usecase "record \n book return" as record_book_return
     note right of rent_book: condition: \n - book borrowed \n less than 5 \n - book available
 
 
@@ -30,18 +32,21 @@ user -- browse_book
 member -- rent_book
 rent_book ..> browse_book : <<include>>
 
-librarian -- search_book
-librarian -- track_book_borrow
+librarian -l- search_book
 rent_book ..> search_book : <<include>>
-rent_book ..> track_book_borrow : <<include>>
 
-member -- pay
-pay ..> rent_book : <<include>>
+member --- pay
+pay ...> rent_book : <<include>>
 pay<|--pay_cash
 pay<|--pay_e_wallet
 
 store -- record_book_reservation
 record_book_reservation ..> pay : <<include>>
-
+member -- return_book
+librarian -- return_book_warehouse
+return_book_warehouse .u.> return_book : <<include>>
+return_book_warehouse ...> search_book : <<include>>
+store --- record_book_return
+record_book_return ...> return_book_warehouse : <<include>>
 
 @enduml
