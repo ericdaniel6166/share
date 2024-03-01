@@ -32,11 +32,11 @@ user -- browse_book
 member -- rent_book
 rent_book ..> browse_book : <<include>>
 
-librarian -l- search_book
+librarian -- search_book
 rent_book ..> search_book : <<include>>
 
-member --- pay
-pay ...> rent_book : <<include>>
+member -- pay
+pay ..> rent_book : <<include>>
 pay<|--pay_cash
 pay<|--pay_e_wallet
 
@@ -44,9 +44,9 @@ store -- record_book_reservation
 record_book_reservation ..> pay : <<include>>
 member -- return_book
 librarian -- return_book_warehouse
-return_book_warehouse .u.> return_book : <<include>>
-return_book_warehouse ...> search_book : <<include>>
-store --- record_book_return
-record_book_return ...> return_book_warehouse : <<include>>
+return_book_warehouse ..> return_book : <<include>>
+return_book_warehouse ....> search_book : <<include>>
+store -- record_book_return
+record_book_return ..> return_book : <<include>>
 
 @enduml
