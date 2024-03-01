@@ -2,38 +2,38 @@ As an actor (guest, member, librarian, admin), I can:
 
 - Browse the available books by genre, author, and popularity.
 
-As an actor (member):
+As an actor (member), I can:
 
 - Rent physical books from Lucy for a specified period.
 - Pre-order books that are currently not available.
-- Exchange my favorite books with other members through Lucy's intermediary service.
+- Exchange my favorite books with other members through Lucy's book exchange service.
 - Access digital versions (e-books) and audiobooks of available titles.
 - Receive notifications when a pre-ordered book becomes available.
 - View reviews and ratings from other members for each book.
-- Obtain recommendations from Lucy's librarians based on my preferences.
 - Register for a membership card with a unique identifier, name, and contact information.
 - Reserve a maximum of 5 books at a time for borrowing.
 - Return borrowed books within the specified period to avoid penalties.
 - Receive notifications about book availability, reservations, and overdue returns.
 - Provide feedback and reviews for books I have read.
-- Participate in book exchange programs facilitated by Lucy.
 - Receive recommendations from librarians based on my reading preferences.
-- Access my borrowing history and membership details through an online portal.
+- Access my borrowing history
+- Access membership details.
 
-As an actor (librarian, admin):
+As an actor (librarian), I can:
 
 - Manage Available Books
 - Manage, track Book Borrowings
 - Manage Book Reservations
 - Manage, Handle Requests for Unavailable Books
-- search books in the warehouse.
+- Search books in the warehouse.
+- Recommend books to members
 
-As an actor (admin):
+As an actor (admin), I can:
 - Manage reports for business performance
 
-As an actor (<<system>> bookstore management):
+As an actor (<<system>> bookstore management), I can:
 
-- Issue membership cards to members for book borrowing and returns.
+- Issue membership cards to members.
 - Record book reservations, including member ID, book ID, borrowing date, and return date.
 - Restock returned books into the warehouse and update the inventory.
 - Manage the physical storage location of books in the warehouse.
@@ -48,11 +48,11 @@ NFRs:
 - Ensure scalability to handle the increasing number of users and transactions.
     - 100,000 books
     - 20,000 members
-    - average 150,000 book transactions per months
+    - avg 150,000 book transactions per months
     - peak 50,000 book transactions per day
     - peak 2,000 book reservation transactions per day
     -> avg book transactions 4 TPS
     -> peak book transactions 40 TPS
     -> peak book reservation transactions 2 TPS
-- search books quickly in the warehouse.
+- Search books QUICKLY in the warehouse.
 - Provide analytics and reporting tools for monitoring business performance.
