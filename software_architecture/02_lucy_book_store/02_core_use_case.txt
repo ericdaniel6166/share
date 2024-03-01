@@ -11,8 +11,7 @@ As an actor (member), I can:
 
 As an actor (librarian), I can:
 
-- Manage, track Book Borrowings
-- Manage Book Reservations
+- Manage, track Book Borrowings & Reservations
 - Search books in the warehouse.
 
 As an actor (<<system>> bookstore management), I can:

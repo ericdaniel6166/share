@@ -22,8 +22,7 @@ As an actor (member), I can:
 As an actor (librarian), I can:
 
 - Manage Available Books
-- Manage, track Book Borrowings
-- Manage Book Reservations
+- Manage, track Book Borrowings & Reservations
 - Manage, Handle Requests for Unavailable Books
 - Search books in the warehouse.
 - Recommend books to members
