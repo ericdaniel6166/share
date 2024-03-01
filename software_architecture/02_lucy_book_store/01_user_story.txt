@@ -23,7 +23,6 @@ As an actor (librarian), I can:
 
 - Manage Available Books
 - Manage, track Book Borrowings & Reservations
-- Manage, Handle Requests for Unavailable Books
 - Search books in the warehouse.
 - Recommend books to members
 
@@ -42,6 +41,7 @@ As an actor (<<system>> bookstore management), I can:
 - Implement a penalty system for overdue books.
 - Automate the process of sending notifications to members.
 - Generate business reports and monitoring business performance.
+- Manage, Handle Requests for Unavailable Books
 
 NFRs:
 - Ensure scalability to handle the increasing number of users and transactions.
