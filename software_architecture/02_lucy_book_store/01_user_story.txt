@@ -1,4 +1,4 @@
-As an actor (guest, member, librarian, admin), I can:
+As an actor (guest, member, librarian), I can:
 
 - Browse the available books by genre, author, and popularity.
 
@@ -6,16 +6,14 @@ As an actor (member), I can:
 
 - Rent physical books from Lucy for a specified period.
 - Pre-order books that are currently not available.
-- Exchange my favorite books with other members through Lucy's book exchange service.
-- Access digital versions (e-books) and audiobooks of available titles.
-- Receive notifications when a pre-ordered book becomes available.
 - View reviews and ratings from other members for each book.
-- Register for a membership card with a unique identifier, name, and contact information.
-- Reserve a maximum of 5 books at a time for borrowing.
 - Return borrowed books within the specified period to avoid penalties.
 - Receive notifications about book availability, reservations, and overdue returns.
 - Provide feedback and reviews for books I have read.
 - Receive recommendations from librarians based on my reading preferences.
+- Access digital versions (e-books) and audiobooks of available titles.
+- Register for a membership card with a unique identifier, name, and contact information.
+- Exchange my favorite books with other members through Lucy's book exchange service.
 - Access my borrowing history
 - Access membership details.
 
@@ -25,9 +23,6 @@ As an actor (librarian), I can:
 - Manage, track Book Borrowings & Reservations
 - Search books in the warehouse.
 - Recommend books to members
-
-As an actor (admin), I can:
-- Manage reports for business performance
 
 As an actor (<<system>> bookstore management), I can:
 
@@ -39,9 +34,9 @@ As an actor (<<system>> bookstore management), I can:
 - Notify members when pre-ordered or out-of-stock books become available.
 - Ensure that the maximum reservation limit (5 books) and borrowing period (14 days) are enforced.
 - Implement a penalty system for overdue books.
+- Manage, Handle Requests for Unavailable Books
 - Automate the process of sending notifications to members.
 - Generate business reports and monitoring business performance.
-- Manage, Handle Requests for Unavailable Books
 
 NFRs:
 - Ensure scalability to handle the increasing number of users and transactions.
