@@ -48,7 +48,7 @@ NFRs:
 - Ensure scalability to handle the increasing number of users and transactions.
     - 100,000 books
     - 20,000 members
-    - average 150,000 book transactions per months
+    - avg 150,000 book transactions per months
     - peak 50,000 book transactions per day
     - peak 2,000 book reservation transactions per day
     -> avg book transactions 4 TPS
