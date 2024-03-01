@@ -1,24 +1,2 @@
-As an actor (guest, member, librarian), I can:
-
-- Browse the available books by genre, author, and popularity.
-
-As an actor (member), I can:
-
-- Rent physical books from Lucy for a specified period.
-- View reviews and ratings from other members for each book.
-- Receive notifications about book availability, reservations, and overdue returns.
-- Provide feedback and reviews for books I have read.
-
-As an actor (librarian), I can:
-
-- Manage, track Book Borrowings & Reservations
-- Search books in the warehouse.
-
-As an actor (<<system>> bookstore management), I can:
-
-- Manage, track Book Borrowings & Reservations
-- Record book reservations, including member ID, book ID, borrowing date, and return date.
-- Restock returned books into the warehouse and update the inventory.
-- Manage the physical storage location of books in the warehouse.
-- Ensure that the maximum reservation limit (5 books) and borrowing period (14 days) are enforced.
+rent book
 
