@@ -1,0 +1,47 @@
+@startuml
+
+left to right direction
+
+Guest as guest
+Member as member
+Librarian as librarian
+User as user
+"<<system>> \n bookstore" as store
+
+rectangle "bookstore system - rent physical book" {
+    usecase "rent book" as rent_book
+    usecase "browse book" as browse_book
+    usecase "track \n book borrowings" as track_book_borrow
+    usecase "search books \n in the warehouse" as search_book
+    usecase "pay deposit" as pay
+    usecase "pay \n with cash" as pay_cash
+    usecase "pay \n with e-wallet" as pay_e_wallet
+    usecase "record \n book reservation" as record_book_reservation
+    note right of rent_book: condition: \n - book borrowed \n less than 5 \n - book available
+
+
+}
+user<|--guest
+user<|--member
+user<|--librarian
+
+user -- browse_book
+
+member -- rent_book
+rent_book ..> browse_book : <<include>>
+
+librarian -- search_book
+librarian -- track_book_borrow
+rent_book ..> search_book : <<include>>
+rent_book ..> track_book_borrow : <<include>>
+
+member -- pay
+pay ..> rent_book : <<include>>
+pay<|--pay_cash
+pay<|--pay_e_wallet
+
+store -- record_book_reservation
+record_book_reservation ..> pay : <<include>>
+
+
+@enduml

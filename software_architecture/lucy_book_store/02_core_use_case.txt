@@ -1,58 +1,25 @@
-As an actor (guest, member, librarian, admin), I can:
+As an actor (guest, member, librarian), I can:
 
 - Browse the available books by genre, author, and popularity.
 
 As an actor (member), I can:
 
 - Rent physical books from Lucy for a specified period.
-- Pre-order books that are currently not available.
-- Exchange my favorite books with other members through Lucy's book exchange service.
-- Access digital versions (e-books) and audiobooks of available titles.
-- Receive notifications when a pre-ordered book becomes available.
 - View reviews and ratings from other members for each book.
-- Register for a membership card with a unique identifier, name, and contact information.
-- Reserve a maximum of 5 books at a time for borrowing.
-- Return borrowed books within the specified period to avoid penalties.
 - Receive notifications about book availability, reservations, and overdue returns.
 - Provide feedback and reviews for books I have read.
-- Receive recommendations from librarians based on my reading preferences.
-- Access my borrowing history
-- Access membership details.
 
 As an actor (librarian), I can:
 
-- Manage Available Books
 - Manage, track Book Borrowings
 - Manage Book Reservations
-- Manage, Handle Requests for Unavailable Books
 - Search books in the warehouse.
-- Recommend books to members
-
-As an actor (admin), I can:
-- Manage reports for business performance
 
 As an actor (<<system>> bookstore management), I can:
 
-- Issue membership cards to members.
 - Record book reservations, including member ID, book ID, borrowing date, and return date.
 - Restock returned books into the warehouse and update the inventory.
 - Manage the physical storage location of books in the warehouse.
-- Handle cases where books are borrowed by other members or not available in stock.
-- Notify members when pre-ordered or out-of-stock books become available.
 - Ensure that the maximum reservation limit (5 books) and borrowing period (14 days) are enforced.
-- Implement a penalty system for overdue books.
 - Automate the process of sending notifications to members.
-- Generate business reports and monitoring business performance.
 
-NFRs:
-- Ensure scalability to handle the increasing number of users and transactions.
-    - 100,000 books
-    - 20,000 members
-    - avg 150,000 book transactions per months
-    - peak 50,000 book transactions per day
-    - peak 2,000 book reservation transactions per day
-    -> avg book transactions 4 TPS
-    -> peak book transactions 40 TPS
-    -> peak book reservation transactions 2 TPS
-- Search books QUICKLY in the warehouse.
-- Provide analytics and reporting tools for monitoring business performance.

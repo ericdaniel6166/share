@@ -1,0 +1,37 @@
+@startuml
+left to right direction
+:<<system>> \n notification: as notif
+:customer: as c
+:barista: as b
+:staff: as s
+rectangle "coffee shop system" {
+    usecase "order coffee" as order_coffee
+    usecase "order cake" as order_cake
+    usecase "view catalog" as view_catalog
+    usecase "pay/checkout" as pay
+    usecase "make coffee" as make_coffee
+    usecase "pay with cash" as pay_cash
+    usecase "pay with e-wallet" as pay_e_wallet
+    usecase "view invoice" as view_invoice
+    usecase "send invoice" as send_invoice
+
+}
+c---order_coffee
+c--view_catalog
+order_coffee ..>view_catalog:<<include>>
+order_coffee <... make_coffee:<<include>>
+make_coffee--b
+b--|>s
+
+c-r-view_invoice
+
+view_invoice ...>send_invoice:<<include>>
+
+c-r-pay
+
+pay<|--pay_cash
+pay<|--pay_e_wallet
+send_invoice--notif
+order_coffee <.pay:<<include>>
+order_coffee <..order_cake:<<extend>>
+@enduml
