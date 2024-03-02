@@ -1,2 +1,2 @@
-rent book
+1. rent book
 
