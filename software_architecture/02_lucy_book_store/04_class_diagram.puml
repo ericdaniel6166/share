@@ -1,0 +1,49 @@
+@startuml
+
+class User {
+    <<abstract>>
+    +browseBook()
+}
+
+class Guest {
+
+}
+
+class Member {
+    +rentBook()
+    +payDeposit()
+    +returnBook()
+}
+
+class Librarian {
+    +searchBookLocation()
+    +returnBookToWarehouse()
+}
+
+class NotificationSystem {
+    +notify()
+}
+
+class PaymentGateway {
+    <<abstract>>
+    +makePayment()
+}
+
+class CashPayment {
+}
+
+class EWalletPayment {
+}
+
+User <|-- Guest
+User <|-- Member
+User <|-- Librarian
+
+Member o-- PaymentGateway
+
+PaymentGateway <|-- CashPayment
+
+PaymentGateway <|-- EWalletPayment
+
+
+@enduml

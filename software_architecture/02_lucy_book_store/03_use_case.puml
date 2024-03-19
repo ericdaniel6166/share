@@ -17,8 +17,7 @@ rectangle "bookstore system - rent physical book" {
     usecase "pay deposit" as pay
     usecase "pay \n with cash" as pay_cash
     usecase "pay \n with e-wallet" as pay_e_wallet
-    usecase "record \n book reservation" as record_book_reservation
-    usecase "record \n book return" as record_book_return
+    usecase "notify user \n book return" as notify_user_book_return
     note right of rent_book: condition: \n - book borrowed \n less than 5 \n - book available
 
 
@@ -40,13 +39,11 @@ pay ..> rent_book : <<include>>
 pay<|--pay_cash
 pay<|--pay_e_wallet
 
-store -- record_book_reservation
-record_book_reservation ..> pay : <<include>>
 member -- return_book
 librarian -- return_book_warehouse
 return_book_warehouse ..> return_book : <<include>>
 return_book_warehouse ....> search_book : <<include>>
-store -- record_book_return
-record_book_return ..> return_book : <<include>>
+store -- notify_user_book_return
+notify_user_book_return ..> return_book : <<include>>
 
 @enduml
